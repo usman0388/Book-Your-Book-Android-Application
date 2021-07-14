@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.myapplicationtest2.Adapters.RecycleviewAdapter;
 import com.example.myapplicationtest2.CustomClasses.GeneraCollection;
 import com.example.myapplicationtest2.CustomClasses.book;
+import com.example.myapplicationtest2.ItemDecoration.GridSpacingItemDecoration;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.Serializable;
@@ -45,6 +46,8 @@ public class genera_display extends AppCompatActivity {
         RecycleviewAdapter myAdapter = new RecycleviewAdapter(genera_display.this,check);
         myrv.setLayoutManager(new GridLayoutManager(genera_display.this,3));
 
+        int spanCount = 3; // 3 columns
+        myrv.addItemDecoration(new GridSpacingItemDecoration(spanCount,60));
         myrv.setAdapter(myAdapter);
 
         cartButton.setOnClickListener(new View.OnClickListener() {

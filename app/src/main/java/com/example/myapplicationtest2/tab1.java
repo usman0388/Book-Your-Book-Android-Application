@@ -39,7 +39,7 @@ public class tab1 extends Fragment {
         RecyclerView myrv2 = (RecyclerView) view.findViewById(R.id.recyclerviewAll);
         myrv2.setLayoutManager(new GridLayoutManager(getActivity(),3));
         int spanCount = 3; // 3 columns
-        //myrv2.addItemDecoration(new GridSpacingItemDecoration(spanCount,60));
+        myrv2.addItemDecoration(new GridSpacingItemDecoration(spanCount,60));
         myrv.setAdapter(myAdapter);
         myrv2.setAdapter(myAdapter);
 
